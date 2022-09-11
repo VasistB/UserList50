@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UserList122</string>
+    <string name="Male">male</string>
+    <string name="female">female</string>
+    <string name="AtoZ">A to Z</string>
+    <string name="search_here">search here</string>
+    <string name="filter_options">Filter Options</string>
+    <string name="male">male</string>
+    <string name="clear_filter">clear filter</string>
+    <string name="name">Name:-</string>
+    <string name="phone">Phone:-</string>
+    <string name="email">Email:-</string>
+    <string name="gender">Gender:-</string>
+    <string name="city">city:-</string>
+    <string name="state">State:-</string>
+    <string name="country">Country:-</string>
+    <string name="street">Street:-</string>
+</resources>
