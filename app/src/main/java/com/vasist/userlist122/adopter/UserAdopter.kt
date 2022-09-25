@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.core.view.isGone
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.vasist.userlist122.JsonData.UserList
@@ -31,7 +30,6 @@ class UserAdopter(var context: Context, private var userList: MutableList<UserLi
         return UserViewHolder(view)
     }
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-
         val list = userList[position]
 
         holder.name.text=list.name.first

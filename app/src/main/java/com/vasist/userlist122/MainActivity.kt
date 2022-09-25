@@ -34,14 +34,11 @@ class MainActivity : AppCompatActivity() {
         val quoteService =
             RetrofitHelper.getInstance().create(RetrofitHelper.QuoteService::class.java)
         val repository = QuoteRepository(quoteService)
-//        newRecyclerView = findViewById(R.id.recyclerView)
 
         mainViewModel =
             ViewModelProvider(this, MainViewModelFactory(repository))[MainViewModel::class.java]
         mainViewModel.quotes.observe(this) {
-
             results = it.results
-
             madopter = UserAdopter(this@MainActivity, it.results)
             binding.recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
             binding.recyclerView.adapter = madopter
@@ -51,7 +48,6 @@ class MainActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 fileList(newText.toString())
                 return true
@@ -78,10 +74,10 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.MenuFemale ->{
+            R.id.MenuFemale -> {
                 madopter.updateList(results.filter { it.gender=="female" } as MutableList<UserList>)
             }
-            R.id.menuMale ->{
+            R.id.menuMale -> {
                 madopter.updateList(results.filter { it.gender=="male" } as MutableList<UserList>)
             }
             R.id.MenuClearFilter -> {

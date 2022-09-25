@@ -6,12 +6,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
+
+const val  url ="https://randomuser.me/api/"
+
 object RetrofitHelper {
-
-
     fun getInstance(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://randomuser.me/api/")
+            .baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
