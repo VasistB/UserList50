@@ -48,5 +48,5 @@ data class Picture(
 
 data class Street(
     val name: String,
-    val number: Int
+    val number: String
 ): Serializable
